@@ -1,0 +1,1597 @@
+@font-face {
+    font-family: Vazirmatn;
+    src: url(../fonts/Vazirmatn-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Vazirmatn;
+}
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcc43, #ffdf7a);
+    z-index: 9999;
+    border-radius: 0 5px 5px 0;
+    transition: width 0.25s ease-out;
+    box-shadow: 0 0 8px rgba(255, 204, 67, 0.6);
+}
+
+
+.intro-texts {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: right;
+    position: relative;
+    padding-right: 2rem;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero {
+    height: 123vh;
+    background: radial-gradient(circle at bottom right, #572fc3 0%, rgba(173, 12, 152, 0.884) 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    direction: rtl;
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    height: 14vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    list-style: none;
+}
+
+.navbar-custom {
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0px);
+    transition:
+        background-color 0.6s ease,
+        box-shadow 0.6s ease,
+        backdrop-filter 0.6s ease;
+}
+
+.navbar-custom .nav-item a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.6s ease;
+}
+
+.navbar-custom.scrolled .nav a {
+    color: #572fc3;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-custom {
+        height: 8vh;
+    } 
+
+    .navbar-custom a {
+        font-size: 0.8rem;
+    }
+
+    .nav {
+        display: none;
+        /* پیش‌فرض مخفی در موبایل */
+        flex-direction: column;
+        background: #eee;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav.active {
+        display: flex;
+        /* فقط وقتی کلاس active اضافه شد */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+
+.intro-texts {
+    align-items: right;
+    display: flex;
+    justify-content: space-evenly;
+    height: 45vh;
+    margin-top: 7%;
+    margin-right: 3%;
+}
+
+#item1 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+#item2 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+#item3 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+#item4 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+#item5 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+#item6 :hover {
+    color: #ffcc43;
+    transition: ease 0.5s;
+}
+
+
+.intro-texts h5 {
+    font-size: 1rem;
+    opacity: 0.92;
+}
+
+.hero {
+    padding: 150px 20px 160px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.floating-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: 1;
+    right: 35%;
+}
+
+.float-img {
+    width: 1000px;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+/* موبایل: عرض کمتر از 768px */
+@media (max-width: 767px) {
+
+    .hero {
+        height: 90vh;
+    }
+
+    .intro-texts {
+        text-align: right;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .intro-texts h5 {
+        font-size: 0.8rem;
+    }
+
+    .intro-texts h1:first-of-type {
+        font-size: 1.7rem !important;
+        z-index: 10;
+    }
+
+    .intro-texts h1:last-of-type {
+        font-size: 1.7rem !important;
+    }
+
+    .intro-texts p {
+        width: 100% !important;
+        font-size: 0.8rem !important;
+
+    }
+
+    .floating-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.6rem;
+    }
+
+    .floating-wrapper .float-img {
+        opacity: 0;
+    }
+
+    .simple-container {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    #del-in-res1 {
+        opacity: 0;
+    }
+
+    #del-in-res2 {
+        opacity: 0;
+    }
+
+    #del-in-res3 {
+        opacity: 0;
+    }
+
+}
+
+/* تبلت: عرض کمتر از 1024px */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .intro-texts {
+        width: 80%;
+        text-align: right;
+        margin: 0 auto;
+    }
+
+    .intro-texts h5 {
+        font-size: 1.2rem;
+    }
+
+    .intro-texts h1:first-of-type {
+        font-size: 2.3rem !important;
+    }
+
+    .intro-texts h1:last-of-type {
+        font-size: 1.8rem !important;
+    }
+
+    .intro-texts p {
+        width: 100% !important;
+        font-size: 0.95rem !important;
+    }
+
+}
+
+/* انیمیشن بالا و پایین */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.wave-bottom {
+    display: block;
+    width: 100%;
+    position: absolute;
+    margin-bottom: -12vh;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.cardsss {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: grid;
+    width: 90vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.cards img {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* تبلت: کارت‌ها 2 تا در هر ردیف */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards img {
+        width: 90%;
+        /* کارت‌ها کمی کوچکتر روی تبلت */
+    }
+}
+
+/* موبایل: کارت‌ها 1 تا در هر ردیف */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        height: 126vh;
+        /* فاصله کمتر روی موبایل */
+    }
+
+    .cards img {
+        width: 95%;
+        /* کمی بزرگتر برای موبایل */
+    }
+}
+
+
+/*فید شدن کارتها به بالا*/
+
+.cards img {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* وقتی عکس‌ها دیده شدند */
+.cards img.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+.cards img:hover {
+    transform: translateY(-5px);
+    transition: ease 1s;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+.separator {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: #ffcc43;
+    margin: 0 20px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+/* ذرات */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: floatParticles linear infinite;
+}
+
+.particles span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(2) {
+    left: 25%;
+    top: 50%;
+    animation-duration: 12s;
+}
+
+.particles span:nth-child(3) {
+    left: 40%;
+    top: 30%;
+    animation-duration: 9s;
+}
+
+.particles span:nth-child(4) {
+    left: 55%;
+    top: 60%;
+    animation-duration: 11s;
+}
+
+.particles span:nth-child(5) {
+    left: 70%;
+    top: 40%;
+    animation-duration: 8s;
+}
+
+.particles span:nth-child(6) {
+    left: 85%;
+    top: 50%;
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(7) {
+    left: 15%;
+    top: 70%;
+    animation-duration: 13s;
+}
+
+.particles span:nth-child(8) {
+    left: 30%;
+    top: 80%;
+    animation-duration: 9s;
+}
+
+.particles span:nth-child(9) {
+    left: 60%;
+    top: 20%;
+    animation-duration: 12s;
+}
+
+.particles span:nth-child(10) {
+    left: 75%;
+    top: 70%;
+    animation-duration: 11s;
+}
+
+.particles span:nth-child(11) {
+    left: 10%;
+    top: 30%;
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(12) {
+    left: 25%;
+    top: 60%;
+    animation-duration: 12s;
+}
+
+.particles span:nth-child(13) {
+    left: 40%;
+    top: 70%;
+    animation-duration: 9s;
+}
+
+.particles span:nth-child(14) {
+    left: 55%;
+    top: 10%;
+    animation-duration: 11s;
+}
+
+.particles span:nth-child(15) {
+    left: 30%;
+    top: 80%;
+    animation-duration: 8s;
+}
+
+
+@keyframes floatParticles {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50px) translateX(20px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+}
+
+/* حالت بعد از اسکرول */
+.navbar-custom.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(6px);
+    /* افکت لطیف */
+}
+
+.gradient-section {
+    background: linear-gradient(to left, #302db9, #b4b4b8);
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    direction: rtl;
+}
+
+.section-image {
+    width: 400px;
+}
+
+.section-image {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+/* ویدیو */
+.section-video {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* کلاس فعال */
+.show {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+
+.text-box {
+    color: #fff;
+    width: 400px;
+}
+
+.section-video {
+    width: 380px;
+    border-radius: 12px;
+}
+
+
+/* ===========================
+      RESPONSIVE — TABLET
+=========================== */
+@media (max-width: 768px) {
+    .content-box {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section-image,
+    .section-video {
+        width: 48%;
+        margin: 0 auto;
+    }
+
+    .text-box {
+        width: 100%;
+    }
+}
+
+/* ===========================
+      RESPONSIVE — MOBILE
+=========================== */
+@media (max-width: 768px) {
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        /* ترتیب عمودی */
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-image,
+    .section-video {
+        width: 95%;
+    }
+
+    .text-box {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #p1 {
+        font-size: 1.4rem !important;
+    }
+
+    #p2 {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+.options-texts {
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+}
+
+.cards-section {
+    padding: 60px 0;
+    background-color: #f9fafb;
+}
+
+.cards-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    direction: rtl;
+}
+
+.cards-grid .card:hover {
+    transform: translateY(-6px);
+    /* کمی بالا می‌آید */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    /* سایه بزرگ‌تر */
+    transition: ease-in-out 1s;
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 30px;
+    border: none;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تبلت: کارت‌ها 2 تا در هر ردیف */
+@media (max-width: 1024px) {
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* موبایل: کارت‌ها 1 تا در هر ردیف */
+@media (max-width: 768px) {
+
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .cards-section {
+        height: 290vh;
+    }
+
+    .card {
+        height: 20vh;
+    }
+
+    #del-in-res0 {
+        opacity: 0;
+    }
+
+    .card h3 {
+        font-size: 0.84rem;
+        font-weight: 600;
+    }
+
+    .card p {
+        font-size: 0.7rem;
+        opacity: 0.8;
+    }
+
+    .card i {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #f1e8ff;
+    }
+}
+
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.card i {
+    font-size: 45px;
+    color: #ff9d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f1e8ff;
+}
+
+
+.cards-grid .card {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9) rotate(-2deg);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* کارت‌ها از سمت چپ و راست جداگانه */
+.cards-grid .card:nth-child(odd) {
+    transform: translateX(-50px) scale(0.9) rotate(-2deg);
+}
+
+.cards-grid .card:nth-child(even) {
+    transform: translateX(50px) scale(0.9) rotate(2deg);
+}
+
+/* کارت وسطی‌ها (3,6,9) از پایین */
+.cards-grid .card:nth-child(3n) {
+    transform: translateY(50px) scale(0.9) rotate(0deg);
+}
+
+/* وقتی فعال شد */
+.cards-grid .card.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+}
+
+
+.subject-tit {
+    display: flex;
+    align-items: center;
+    width: 36vw;
+    height: 20vh;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.woman-running {
+    width: 40vw;
+    border-radius: 15px;
+}
+
+/* تبلت: عرض کمتر از 1024px */
+@media (max-width: 1024px) {
+    .woman-runner .subject {
+        flex-direction: column;
+        /* عکس بالا، متن زیرش */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .woman-runner .subject img {
+        width: 60%;
+        /* عکس کمی کوچکتر */
+        height: auto;
+    }
+
+    .woman-runner .woman-txts h3 {
+        font-size: 1.5rem;
+    }
+
+    .woman-runner .woman-txts p {
+        font-size: 1rem;
+    }
+}
+
+/* موبایل: عرض کمتر از 600px */
+@media (max-width: 768px) {
+    .woman-runner .subject {
+        gap: 15px;
+    }
+
+    .woman-runner .subject img {
+        width: 90%;
+        /* عکس بزرگ‌تر روی موبایل */
+    }
+
+    .woman-runner .woman-txts h3 {
+        font-size: 1rem;
+    }
+
+    .woman-runner .woman-txts p {
+        font-size: 0.8rem;
+    }
+
+    .woman-runner {
+        margin-top: -15%;
+    }
+}
+
+
+.woman-runner,
+.last-img {
+    padding: 60px 0;
+}
+
+.subject,
+.subject-2 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    gap: 40px;
+    background-color: #f7f7ff;
+    border-radius: 1rem;
+}
+
+.woman-txts,
+.girl-txts {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.woman-txts p {
+    color: #4b5563;
+    font-size: 1rem;
+}
+
+.woman-txts h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #4b5563;
+}
+
+/* بخش کلی */
+.woman-work {
+    padding: 60px 0;
+    background: transparent;
+}
+
+/* کانتینر محتوا */
+.woman-core {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fcf3ff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    direction: rtl;
+    border-radius: 1rem;
+}
+
+/* --- متن‌ها (سمت چپ بصورت بصری) --- */
+.women-working-txts {
+    flex: 1;
+    order: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+/* تیترها و پاراگراف‌ها */
+.women-working-txts h3 {
+    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+    color: #444;
+}
+
+.women-working-txts p {
+    margin: 0 0 18px 0;
+    color: #444;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* --- عکس (سمت راست بصورت بصری) --- */
+.woman-working {
+    width: 40%;
+    max-width: 420px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    order: 2;
+    display: block;
+}
+
+/* اگر می‌خواهی آدمک نرم شناور باشه (اختیاری) */
+.woman-working {
+    animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* تبلت: عرض کمتر از 1024px */
+@media (max-width: 1024px) {
+    .woman-work .woman-core {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .woman-work .woman-core img {
+        width: 60%;
+        height: auto;
+    }
+
+    .woman-work .women-working-txts h3 {
+        font-size: 1.5rem;
+    }
+
+    .woman-work .women-working-txts p {
+        font-size: 1rem;
+    }
+}
+
+/* موبایل: عرض کمتر از 600px */
+@media (max-width: 768px) {
+    .woman-work .woman-core {
+        gap: 15px;
+    }
+
+    .woman-work .woman-core img {
+        width: 80%;
+    }
+
+    .woman-work .women-working-txts h3 {
+        font-size: 1rem;
+    }
+
+    .woman-work .women-working-txts p {
+        font-size: 0.8rem;
+    }
+}
+
+
+@keyframes floatSlow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.woman-running {
+    animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cute-girl {
+    width: 30vw;
+    animation: floatSlow 5s ease-in-out infinite;
+
+}
+
+
+/* تبلت — عرض کمتر از 1024px */
+@media (max-width: 1024px) {
+    .last-img .subject-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .last-img .cute-girl {
+        width: 50%;
+        height: auto;
+    }
+
+    .last-img .girl-txts {
+        width: 50%;
+    }
+
+    .last-img .girl-txts h3 {
+        font-size: 1.5rem;
+    }
+
+    .last-img .girl-txts p {
+        font-size: 1rem;
+    }
+}
+
+/* موبایل — عرض کمتر از 600px */
+@media (max-width: 768px) {
+    .last-img .subject-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .last-img .cute-girl {
+        width: 85%;
+    }
+
+    .last-img .girl-txts h3 {
+        font-size: 1.2rem;
+    }
+
+    .last-img .girl-txts p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+
+
+@keyframes floatSlow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.simple-text-section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.simple-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.simple-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* خط نازک زرد */
+.yellow-line {
+    width: 60px;
+    height: 2px;
+    background-color: #ffcc43;
+    margin: 12px auto 20px auto;
+    border-radius: 10px;
+}
+
+.simple-container p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.three-karts-section {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.karts-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* کارت‌ها */
+.kart {
+    border-radius: 16px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kart:hover {
+    transform: translateY(-6px);
+    transition: ease 1s;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* کارت چپ و راست */
+.kart-left,
+.kart-right {
+    background: #fff;
+    color: #111;
+    width: 330px;
+    height: 66vh;
+}
+
+/* کارت وسط */
+.kart-center {
+    background: #6a11cb;
+    color: #fff;
+    width: 380px;
+    height: 72vh;
+}
+
+/* تیترها */
+.kart h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.kart h5 {
+    margin: 2px 0;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* دکمه */
+.kart button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffcc43;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kart button:hover {
+    background-color: #e6b22d;
+}
+
+/* کارت‌ها ابتدا پنهان و پایین‌تر هستند */
+.kart {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* وقتی اسکرول شد و کلاس show اضافه شد */
+.kart.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* تبلت: عرض کمتر از 1024px → دو کارت در هر ردیف */
+@media (max-width: 1024px) {
+    .karts-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .karts-wrapper .kart {
+        width: 92%;
+        height: auto;
+    }
+}
+
+/* موبایل: عرض کمتر از 600px → کارت‌ها تک ستونه */
+@media (max-width: 768px) {
+    .karts-wrapper {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .karts-wrapper .kart {
+        width: 92%;
+        height: auto;
+    }
+}
+
+/* footer (self-contained) */
+.site-footer {
+    background: #400a79;
+    color: #fff;
+    padding: 48px 0 20px;
+    direction: rtl;
+    font-family: inherit;
+    height: 64vh;
+}
+
+/* container */
+.footer-inner {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* column */
+.footer-col {
+    flex: 1;
+    min-width: 240px;
+    color: #e7eef8;
+}
+
+/* headings */
+.footer-title {
+    margin: 0 0 14px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* about text */
+.footer-text {
+    margin-bottom: 14px;
+    color: #d7e7f6;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* contact rows */
+.contact-row {
+    margin: 6px 0;
+    color: #cfe6ff;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 8px;
+}
+
+.contact-label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.contact-value {
+    color: #dbeeff;
+}
+
+/* contact links */
+.contact-link {
+    color: #dbeeff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: white;
+    transition: ease 1s;
+}
+
+/* links grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 16px;
+}
+
+.links-grid a {
+    color: #dbeeff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 6px 0;
+    display: inline-block;
+}
+
+.links-grid a:hover {
+    color: #fff;
+    transition: ease 1s;
+}
+
+/* newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 12px 0 18px;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-size: 0.95rem;
+}
+
+.newsletter-btn {
+    background: #ffcc43;
+    color: #111;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    filter: brightness(0.95);
+}
+
+/* socials */
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    text-decoration: none;
+    transition: transform .18s ease;
+}
+
+.social svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* footer bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 26px;
+    padding-top: 18px;
+    text-align: center;
+    color: #cfe6ff;
+    font-size: 0.95rem;
+}
+
+/* utility: visually-hidden */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.more-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 20vh;
+}
+
+/* ===== ریسپانسیو فوتر ===== */
+
+/* دسکتاپ: حالت پیش‌فرض */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px 20px;
+}
+
+.newsletter-row {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 8px 12px;
+}
+
+.newsletter-btn {
+    padding: 8px 20px;
+}
+
+/* شبکه اجتماعی */
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* --- تبلت: عرض کمتر از 1024px --- */
+@media (max-width: 1024px) {
+
+    .site-footer {
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-row {
+        flex-direction: column;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        width: 100%;
+    }
+
+    .socials {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .site-footer {
+        height: 110vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-inner {
+        gap: 16px;
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .links-grid a {
+        font-size: 0.7rem;
+    }
+
+    .newsletter-row {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        font-size: 0.9rem;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .footer-contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+    }
+
+    .footer-contact .contact-row {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .contact-row span {
+        font-size: 0.85rem;
+    }
+
+    .contact-row a {
+        font-size: 0.85rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+
+    .footer-bottom {
+        opacity: 0;
+    }
+}
