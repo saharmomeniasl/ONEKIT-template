@@ -55,8 +55,7 @@ html {
 .hamburger {
     display: none;
     font-size: 24px;
-    cursor: pointer;
-}
+    cursor: pointer;}
 
 nav {
     position: fixed;
@@ -101,18 +100,15 @@ nav {
 }
 
 .navbar-custom.scrolled .nav a {
-    color: #572fc3;
-}
+    color: #572fc3;}
 
 @media (max-width: 768px) {
 
     .navbar-custom {
-        height: 8vh;
-    } 
+        height: 8vh;} 
 
     .navbar-custom a {
-        font-size: 0.8rem;
-    }
+        font-size: 0.8rem;}
 
     .nav {
         display: none;
@@ -122,9 +118,8 @@ nav {
         position: absolute;
         top: 60px;
         right: 0;
-        width: 200px;
-    }
-
+        width: 200px;}
+    
     .nav.active {
         display: flex;
         /* فقط وقتی کلاس active اضافه شد */
@@ -133,10 +128,7 @@ nav {
     .hamburger {
         display: block;
         cursor: pointer;
-        font-size: 24px;
-    }
-}
-
+        font-size: 24px;}}
 
 .intro-texts {
     align-items: right;
@@ -190,7 +182,6 @@ nav {
     overflow: hidden;
 }
 
-
 .floating-wrapper {
     position: absolute;
     top: 10%;
@@ -201,9 +192,7 @@ nav {
 
 .float-img {
     width: 1000px;
-    animation: float 4s ease-in-out infinite;
-}
-
+    animation: float 4s ease-in-out infinite;}
 
 /* موبایل: عرض کمتر از 768px */
 @media (max-width: 767px) {
@@ -261,10 +250,7 @@ nav {
     }
 
     #del-in-res3 {
-        opacity: 0;
-    }
-
-}
+        opacity: 0;}}
 
 /* تبلت: عرض کمتر از 1024px */
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -275,39 +261,29 @@ nav {
     }
 
     .intro-texts h5 {
-        font-size: 1.2rem;
-    }
+        font-size: 1.2rem;}
 
     .intro-texts h1:first-of-type {
-        font-size: 2.3rem !important;
-    }
+        font-size: 2.3rem !important;}
 
     .intro-texts h1:last-of-type {
-        font-size: 1.8rem !important;
-    }
+        font-size: 1.8rem !important;}
 
     .intro-texts p {
         width: 100% !important;
         font-size: 0.95rem !important;
-    }
-
-}
+    }}
 
 /* انیمیشن بالا و پایین */
 @keyframes float {
     0% {
-        transform: translateY(0);
-    }
+        transform: translateY(0);}
 
     50% {
-        transform: translateY(-15px);
-    }
+        transform: translateY(-15px);}
 
     100% {
-        transform: translateY(0);
-    }
-}
-
+        transform: translateY(0);}}
 
 .wave-bottom {
     display: block;
@@ -370,9 +346,7 @@ nav {
     }
 }
 
-
 /*فید شدن کارتها به بالا*/
-
 .cards img {
     opacity: 0;
     transform: translateY(40px) scale(0.9);
@@ -385,13 +359,11 @@ nav {
     transform: translateY(0) scale(1);
 }
 
-
 .cards img:hover {
     transform: translateY(-5px);
     transition: ease 1s;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
-
 
 .separator {
     display: inline-block;
@@ -568,20 +540,16 @@ nav {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-
-/* ویدیو */
 .section-video {
     opacity: 0;
     transform: scale(0.8);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* کلاس فعال */
 .show {
     opacity: 1;
     transform: translate(0, 0) scale(1);
 }
-
 
 .text-box {
     color: #fff;
@@ -593,10 +561,6 @@ nav {
     border-radius: 12px;
 }
 
-
-/* ===========================
-      RESPONSIVE — TABLET
-=========================== */
 @media (max-width: 768px) {
     .content-box {
         display: flex;
@@ -616,9 +580,6 @@ nav {
     }
 }
 
-/* ===========================
-      RESPONSIVE — MOBILE
-=========================== */
 @media (max-width: 768px) {
     .content-box {
         display: flex;
@@ -766,7 +727,6 @@ nav {
     background: #f1e8ff;
 }
 
-
 .cards-grid .card {
     opacity: 0;
     transform: translateY(30px) scale(0.9) rotate(-2deg);
@@ -792,7 +752,6 @@ nav {
     opacity: 1;
     transform: translateX(0) translateY(0) scale(1) rotate(0deg);
 }
-
 
 .subject-tit {
     display: flex;
@@ -936,7 +895,6 @@ nav {
     opacity: 0.9;
 }
 
-/* --- عکس (سمت راست بصورت بصری) --- */
 .woman-working {
     width: 40%;
     max-width: 420px;
@@ -1258,7 +1216,6 @@ nav {
     }
 }
 
-/* footer (self-contained) */
 .site-footer {
     background: #400a79;
     color: #fff;
@@ -1480,7 +1437,6 @@ nav {
     padding: 8px 20px;
 }
 
-/* شبکه اجتماعی */
 .socials {
     display: flex;
     gap: 12px;
@@ -1589,8 +1545,7 @@ nav {
     .footer-text {
         font-size: 0.8rem;
     }
-
-
+    
     .footer-bottom {
         opacity: 0;
     }
